@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letreco</title>
     <style>
+        * {
+            background-color: rgb(238, 252, 250);
+        }
         .title-container {
             text-align: center;
             width: 510px;
@@ -57,10 +60,12 @@
 
         .typing {
             border: 3px solid #252525;
+            background-color: #effff4;
         }
 
         .disabled {
             border: 1px solid #252525;
+            background-color: rgb(255, 253, 253);
         }
 
         .right {
@@ -93,7 +98,8 @@
         }
 
         .keyboard-row-container.notAlphabetic {
-            width: 100%
+            width: 100%;
+           
         }
 
         .keyboard-row-container:not(.notAlphabetic) button {
@@ -104,13 +110,14 @@
             border: 1px solid #252525;
             font-size: 16px;
             cursor: pointer;
+            background-color: rgb(240, 238, 238);        
         }
 
         .footer {
             position: absolute;
             rotate: 270deg;
             bottom: 70px;
-            min-height: 15%;
+            min-height: 1%;
             font-size: 12px;
         }
     </style>
@@ -156,6 +163,7 @@
     let currentRow = 0;
     let currentColumn = 0;
     let letreco = "ANDRE";
+    let words = ["PLENO","MAGOS","FESTA","PRACA","MESMO","PIANO"];
     let letrecoMap = {};
     for (let index = 0; index < letreco.length; index++) {
         letrecoMap[letreco[index]] = index;
