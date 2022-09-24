@@ -10,6 +10,7 @@
         * {
             background-color: rgb(238, 252, 250);
         }
+
         .title-container {
             text-align: center;
             width: 510px;
@@ -99,7 +100,7 @@
 
         .keyboard-row-container.notAlphabetic {
             width: 100%;
-           
+
         }
 
         .keyboard-row-container:not(.notAlphabetic) button {
@@ -110,7 +111,7 @@
             border: 1px solid #252525;
             font-size: 16px;
             cursor: pointer;
-            background-color: rgb(240, 238, 238);        
+            background-color: rgb(240, 238, 238);
         }
 
         .footer {
@@ -163,7 +164,7 @@
     let currentRow = 0;
     let currentColumn = 0;
     let letreco = "ANDRE";
-    let words = ["PLENO","MAGOS","FESTA","PRACA","MESMO","PIANO"];
+    let words = ["PLENO", "MAGOS", "FESTA", "PRACA", "MESMO", "PIANO"];
     let letrecoMap = {};
     for (let index = 0; index < letreco.length; index++) {
         letrecoMap[letreco[index]] = index;
@@ -285,7 +286,7 @@
 
     document.onkeydown = function (evt) {//adiciona captura do teclado fisico
         evt = evt || window.evt
-        if (evt.key === "Enter") {//se key é enter, chama metodo do enter
+        if (evt.key === "Enter") {//se key é enter, chama metodo do enter (guess linha 212)
             checkGuess();
         } else if (evt.key === "Backspace") {//se key é backspace, chama backspace
             handleBackspace()
